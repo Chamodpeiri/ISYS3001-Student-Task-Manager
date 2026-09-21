@@ -1,5 +1,15 @@
 # Git Workflow and Assessment Evidence
 
+## Repository identification
+
+- GitHub account: `Chamodpeiri`
+- Repository: `Chamodpeiri/ISYS3001-Student-Task-Manager`
+- Production branch: `main`
+- Integration branch: `develop`
+- Current development branch: `feature/1-project-scaffold`
+
+Do not add a student ID, password, database credential, access token, or private personal information to the public repository.
+
 ## Genuine development sequence
 
 Complete each item as real work. Open an Issue first, create the branch from `develop`, make focused commits, push the branch, open a pull request, confirm CI, and merge it. Do not create all commits at the end merely to imitate activity.
@@ -8,15 +18,14 @@ Complete each item as real work. Open an Issue first, create the branch from `de
 | --- | --- | --- |
 | 1 | Repository foundation on `main` | Initial commit, repository structure, README |
 | 2 | Create `develop` branch | Branch list and branch protection/ruleset |
-| 3 | `feature/2-project-scaffold` | Issue, commits, pull request, CI run |
-| 4 | `feature/3-user-authentication` | Acceptance criteria, tests, pull request |
-| 5 | `feature/4-task-crud` | Several focused commits, tests, pull request |
-| 6 | `feature/5-task-status-filter` | Linked issue, UI evidence, pull request |
-| 7 | `fix/6-task-authorization` | Bug report, regression test, pull request |
-| 8 | `docs/7-deployment-runbook` | Documentation pull request |
-| 9 | `release/0.1.0` | Changelog update, release pull request |
-| 10 | Tag and release `v0.1.0` | Annotated tag, GitHub Release, deployed SHA |
-| 11 | Controlled correction, if genuinely needed | `hotfix/` issue, PR, `v0.1.1`, rollback evidence |
+| 3 | Issue #1 - `feature/1-project-scaffold` | Issue, commits, pull request, CI run |
+| 4 | Issue #2 - `feature/2-authentication` | Acceptance criteria, tests, pull request |
+| 5 | Issue #3 - `feature/3-task-crud` | Several focused commits, tests, pull request |
+| 6 | Issue #4 - `feature/4-task-status-filter` | Linked issue, UI evidence, pull request |
+| 7 | Issue #5 - `chore/5-quality-maintenance` | CI, security and maintenance evidence |
+| 8 | Issue #6 - `release/1.0.0` | Changelog, release pull request, deployment |
+| 9 | Tag and release `v1.0.0` | Annotated tag, GitHub Release, deployed SHA |
+| 10 | Controlled correction, if genuinely needed | `hotfix/` issue, PR, patch release, rollback evidence |
 
 ## Advanced Git/GitHub features to demonstrate
 
@@ -53,4 +62,3 @@ Capture readable screenshots and explain the significance of each one in your ow
 ## Privacy warning
 
 Do not show student ID, passwords, database connection strings, session secrets, access tokens, private email addresses, or other personal information in GitHub or screenshots.
-
