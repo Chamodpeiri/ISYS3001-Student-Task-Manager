@@ -1,0 +1,28 @@
+name: Feature request
+description: Plan a new application capability
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose
+      description: What user or project need does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance criteria
+      description: Provide measurable conditions for completion.
+      placeholder: |
+        - [ ] Given..., when..., then...
+        - [ ] Given..., when..., then...
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Configuration and deployment impact
+      description: Note changes to dependencies, environment keys, database, or deployment.
+
