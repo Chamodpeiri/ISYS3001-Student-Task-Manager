@@ -1,0 +1,35 @@
+{
+  "name": "isys3001-student-task-manager",
+  "version": "1.0.0",
+  "description": "A small web application for creating, editing, deleting, completing, and filtering personal tasks.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chamodpeiri/ISYS3001-Student-Task-Manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Chamodpeiri/ISYS3001-Student-Task-Manager/issues"
+  },
+  "homepage": "https://github.com/Chamodpeiri/ISYS3001-Student-Task-Manager#readme",
+  "dependencies": {
+    "dotenv": "^18.0.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^10.11.0",
+    "supertest": "^7.2.2"
+  }
+}
