@@ -1,21 +1,21 @@
-name: Continuous Integration
+name: CI
 
 on:
-  pull_request:
-    branches: [main, develop]
   push:
-    branches: [main, develop]
-
-permissions:
-  contents: read
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
 
 jobs:
-  quality:
-    if: ${{ hashFiles('package-lock.json') != '' }}
+  quality-checks:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -24,11 +24,11 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install locked dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: Run lint checks
+      - name: Run ESLint
         run: npm run lint
 
-      - name: Run automated tests
+      - name: Run tests
         run: npm test

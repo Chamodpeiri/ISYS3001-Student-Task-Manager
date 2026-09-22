@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    name="description"
+    content="Student Task Manager for organizing personal study tasks."
+  >
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">ISYS3001 PROJECT</p>
+      <h1>Student Task Manager</h1>
+    </div>
+
+    <button id="logoutButton" class="secondary hidden" type="button">
+      Log out
+    </button>
+  </header>
+
+  <main class="container">
+    <section id="authSection" class="auth-layout">
+      <article class="welcome-panel">
+        <p class="eyebrow">PLAN • FOCUS • COMPLETE</p>
+        <h2>Manage your study tasks in one place.</h2>
+        <p>
+          Create tasks, track progress and stay focused on your
+          university work.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="tabs">
+          <button
+            id="loginTab"
+            class="tab active"
+            type="button"
+          >
+            Login
+          </button>
+
+          <button
+            id="registerTab"
+            class="tab"
+            type="button"
+          >
+            Register
+          </button>
+        </div>
+
+        <p id="authMessage" class="message" aria-live="polite"></p>
+
+        <form id="loginForm">
+          <label for="loginEmail">Email address</label>
+          <input
+            id="loginEmail"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          >
+
+          <label for="loginPassword">Password</label>
+          <input
+            id="loginPassword"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            minlength="8"
+            required
+          >
+
+          <button class="primary full-width" type="submit">
+            Login
+          </button>
+        </form>
+
+        <form id="registerForm" class="hidden">
+          <label for="registerName">Full name</label>
+          <input
+            id="registerName"
+            name="name"
+            type="text"
+            autocomplete="name"
+            maxlength="80"
+            required
+          >
+
+          <label for="registerEmail">Email address</label>
+          <input
+            id="registerEmail"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          >
+
+          <label for="registerPassword">Password</label>
+          <input
+            id="registerPassword"
+            name="password"
+            type="password"
+            autocomplete="new-password"
+            minlength="8"
+            required
+          >
+
+          <button class="primary full-width" type="submit">
+            Create account
+          </button>
+        </form>
+      </article>
+    </section>
+
+    <section id="taskSection" class="hidden">
+      <div class="dashboard-heading">
+        <div>
+          <p class="eyebrow">MY DASHBOARD</p>
+          <h2>Your tasks</h2>
+        </div>
+
+        <div class="statistics">
+          <span id="taskCount">0 tasks</span>
+        </div>
+      </div>
+
+      <article class="card">
+        <h3>Add a new task</h3>
+
+        <form id="taskForm" class="task-form">
+          <label for="taskTitle">Task title</label>
+          <input
+            id="taskTitle"
+            name="title"
+            type="text"
+            maxlength="120"
+            required
+          >
+
+          <label for="taskDescription">Description</label>
+          <textarea
+            id="taskDescription"
+            name="description"
+            maxlength="500"
+            rows="3"
+          ></textarea>
+
+          <label for="taskDueDate">Due date</label>
+          <input
+            id="taskDueDate"
+            name="dueDate"
+            type="date"
+          >
+
+          <button class="primary" type="submit">
+            Add task
+          </button>
+        </form>
+      </article>
+
+      <nav class="filters" aria-label="Task filters">
+        <button
+          class="filter active"
+          data-status="all"
+          type="button"
+        >
+          All
+        </button>
+
+        <button
+          class="filter"
+          data-status="pending"
+          type="button"
+        >
+          Pending
+        </button>
+
+        <button
+          class="filter"
+          data-status="completed"
+          type="button"
+        >
+          Completed
+        </button>
+      </nav>
+
+      <p id="taskMessage" class="message" aria-live="polite"></p>
+
+      <section id="taskList" class="task-list" aria-live="polite">
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>Student Task Manager • ISYS3001</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

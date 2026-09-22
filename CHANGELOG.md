@@ -1,13 +1,27 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to the Student Task Manager are documented here.
 
-The format follows Keep a Changelog, and releases use Semantic Versioning.
-
-## [Unreleased]
+## [1.0.0] - 2026-09-22
 
 ### Added
 
-- Initial configuration-management foundation.
+- Student registration, login, and logout
+- Secure session-based authentication
+- Task creation, viewing, editing, completion, and deletion
+- Task ownership and authorization protection
+- Pending and completed task filters
+- Responsive task-management user interface
+- MongoDB Atlas database integration
+- Health-check endpoint
+- Automated health, authentication, authorization, and task tests
+- GitHub Actions continuous integration
+- Helmet security headers
+- Secure HTTP-only session cookies
 
-[Unreleased]: https://github.com/Chamodpeiri/ISYS3001-Student-Task-Manager/compare/v0.1.0...HEAD
+### Security
+
+- Passwords are securely hashed
+- User task data is protected from unauthorized access
+- Environment secrets are excluded from version control
+- Dependency audit reports zero known vulnerabilities
