@@ -1,6 +1,6 @@
 {
   "name": "isys3001-student-task-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small web application for creating, editing, deleting, completing, and filtering personal tasks.",
   "main": "index.js",
   "directories": {
